@@ -16,3 +16,4 @@ class ProductPageLocators:
     BOOK_PRICE = (By.XPATH, '//*[@id="content_inner"]/article/div[1]/div[2]/p[1]')
     LATEST_ADD_MESSAGE = (By.XPATH, '//*[@id="messages"]/div[1]/div/strong')
     CART_PRICE = (By.XPATH, '//*[@id="messages"]/div[3]/div/p[1]/strong')
+    SUCCESS_MESSAGE = (By.XPATH, '//*[@id="messages"]/div[1]/div')
