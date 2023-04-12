@@ -5,11 +5,16 @@ class BasePageLocators:
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
     GO_TO_CART_BTN = (By.XPATH, '//*[@id="default"]/header/div[1]/div/div[2]/span/a')
+    USER_ICON = (By.CLASS_NAME, 'icon-user')
 
 
 class LoginPageLocators:
     LOGIN_FORM = (By.ID, 'login_form')
     REGISTER_FORM = (By.ID, 'register_form')
+    EMAIL_FIELD = (By.ID,'id_registration-email')
+    PASS_FIELD = (By.ID, 'id_registration-password1')
+    CONFIRM_PASS_FIELD = (By.ID, 'id_registration-password2')
+    SUBMIT_REGISTRATION_BTN = (By.XPATH, '//*[@id="register_form"]/button')
 
 
 class ProductPageLocators:
