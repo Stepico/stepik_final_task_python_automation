@@ -4,7 +4,7 @@ from .pages.login_page import LoginPage
 from .pages.product_page import ProductPage
 
 
-@pytest.mark.skip
+@pytest.mark.need_review
 @pytest.mark.parametrize('link', [
                                   "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer0",
                                   "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer1",
@@ -26,6 +26,7 @@ def test_guest_can_add_product_to_basket(browser, link):
     page.should_modify_price_of_cart_message()
 
 
+@pytest.mark.need_review
 @pytest.mark.xfail
 def test_guest_cant_see_success_message_after_adding_product_to_basket(browser):
     link = 'http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/'
@@ -79,6 +80,7 @@ class TestUserAddToBasketFromProductPage(LoginPage):
         self.register_new_user()
         self.should_be_authorized_user()
 
+    @pytest.mark.need_review
     def test_user_can_add_product_to_basket(self, browser):
         link = 'http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer0'
         page = ProductPage(browser, link)
